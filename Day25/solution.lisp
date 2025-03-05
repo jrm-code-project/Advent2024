@@ -14,7 +14,7 @@
               (if (null char-list)
                   (let ((item (make-grid (length accum) (length (first accum))
                                          :initial-contents (reverse accum))))
-                    (if (every (lambda (s) (eq s '|#|)) (first accum))
+                    (if (every (lambda (s) (eq s '\#)) (first accum))
                         (iter (read-line stream nil)
                               '()
                               locks
